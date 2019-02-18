@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_details: MyText
+  cost: 1.5
+
+two:
+  user_details: MyText
+  cost: 1.5

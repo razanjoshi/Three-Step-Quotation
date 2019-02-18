@@ -1,0 +1,12 @@
+
+<h2> Products </h2>
+<h3> this is where we load all the 3 products </h3>
+  <div class="field">
+    <%= form.label :subscription %>
+    <%= collection_select(:subscription, :id, Subscription.all, :id, :name) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :range %>
+    <%= form.text_field :date_of_tour, "data-provide" => 'datepicker' %>
+  </div>

@@ -1,0 +1,20 @@
+<%= form_with(model: quote, local: true) do |form| %>
+  <% if quote.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(quote.errors.count, "error") %> prohibited this quote from being saved:</h2>
+
+      <ul>
+      <% quote.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= render "#{@quote.current_step}_step", :form => form %>
+
+  <div class="actions">
+    <p><%= form.submit "Continue" %></p>
+    <p><%= form.submit "Back", name: "back_button" unless @quote.first_step? %></p>
+  </div>
+<% end %>
