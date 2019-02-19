@@ -85,7 +85,6 @@ class QuotesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def quote_params
-      binding.pry
       params.permit(:back_button, :user_details, :user_name, :from_date, :to_date,
         :q_key, :user_password, :user_email, :user_phone, :cost,
         subscription_attributes: [:name, :daily_rate, :from_date, :to_date])
