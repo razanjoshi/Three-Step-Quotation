@@ -44,6 +44,8 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'pry'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails', :require => false
 end
 
 group :development do
