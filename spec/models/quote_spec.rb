@@ -4,7 +4,7 @@
 require 'rails_helper'
 describe Quote, type: :model do
   describe '#current_step' do
-    let(:quote) { Quote.new }
+    let(:quote) { FactoryBot.create(:quote) }
     subject(:quote_current_step) { quote.current_step }
 
     context 'when quote is on first step' do
@@ -15,7 +15,7 @@ describe Quote, type: :model do
   end
 
   describe '#last_step?' do
-    let(:quote) { Quote.new }
+  let(:quote) { FactoryBot.create(:quote) }
     subject(:quote_last_step) { quote.last_step? }
 
     context 'when quote is on last step' do

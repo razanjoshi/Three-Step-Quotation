@@ -45,7 +45,8 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'pry'
   gem 'rspec-rails'
-  gem 'factory_girl_rails', :require => false
+  gem 'rails-controller-testing'
+  gem "factory_bot_rails"
 end
 
 group :development do
