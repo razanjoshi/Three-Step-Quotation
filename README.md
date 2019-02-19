@@ -19,7 +19,8 @@ Things you may want to cover:
 
 * Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+* Missing Features:
+I could only manage to make one product available to make a quote for in this application. Just made a basic flow of the process and how the quote is saved. Few form validations.
 
 * ...
 "# Three-Step-Quotation" 
@@ -38,5 +39,9 @@ Things you may want to cover:
 
 **Saved in DB**
 ![5](https://user-images.githubusercontent.com/4223130/53009732-0ba7c980-3434-11e9-90d0-6d2203a7da60.JPG)
+
+**Specs using FactoryBot**
+![6](https://user-images.githubusercontent.com/4223130/53011840-42341300-3439-11e9-83f8-457f8759949a.JPG)
+
 
 
