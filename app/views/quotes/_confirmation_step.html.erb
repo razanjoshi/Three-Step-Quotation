@@ -16,10 +16,18 @@
   <%=h @quote.user_name %>
 </p>
 <p>
-  <strong> Product </strong>
-#   <%=h @quote.user_name %>
+  <strong> Product cost </strong>
+  <% from = Date.parse("#{@quote.subscription_from_date}") %>
+  <% to = Date.parse("#{@quote.subscription_to_date}") %>
+  <% days = (from..to).count {|date| (1..5).include?(date.wday) } %>
+  <% cost =  "#{days * 15}" %>
+  <%=h "$ #{cost}" %>
 </p>
 <p>
   <strong> Quotation Key </strong>
   <%=h @quote.q_key %>
+</p>
+<p>
+  <strong> Subscription </strong>
+  <%=h @quote.user_name %>
 </p>

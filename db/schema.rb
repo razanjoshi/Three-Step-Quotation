@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190218221648) do
+ActiveRecord::Schema.define(version: 20190219073212) do
 
   create_table "quotes", force: :cascade do |t|
     t.text "user_details"
@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 20190218221648) do
     t.string "user_email"
     t.string "user_phone"
     t.string "q_key"
+    t.datetime "subscription_from_date"
+    t.datetime "subscription_to_date"
   end
 
   create_table "subscriptions", force: :cascade do |t|
@@ -29,6 +31,8 @@ ActiveRecord::Schema.define(version: 20190218221648) do
     t.float "daily_rate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "from_date"
+    t.datetime "to_date"
   end
 
   create_table "users", force: :cascade do |t|
