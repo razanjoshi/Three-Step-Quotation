@@ -32,6 +32,7 @@ class QuotesController < ApplicationController
       if params[:back_button]
         @quote.previous_step
       elsif @quote.last_step?
+        calculate_cost
         @quote.save
       else
         @quote.set_q_key unless @quote.first_step?
@@ -46,6 +47,13 @@ class QuotesController < ApplicationController
       flash[:notice] = "Quote Saved"
       redirect_to @quote
     end
+  end
+  
+  def calculate_cost
+    from = @quote.subscription_from_date.to_date
+    to = @quote.subscription_to_date.to_date
+    days = (from..to).count {|date| (1..5).include?(date.wday) }
+    @quote.cost = Subscription::DAILY_RATE * days
   end
 
   # PATCH/PUT /quotes/1
